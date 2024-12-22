@@ -75,14 +75,15 @@
             margin-top: 10px;
             padding: 10px 20px;
             color: white;
-            background: #4CAF50;
+            background: #569DC7;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
         }
         .btn:hover {
-            background: #45a049;
+            background: #4D8DB3;
         }
+
         footer {
             text-align: center;
             padding: 20px 0;
@@ -110,13 +111,25 @@
 
     <!-- About Section -->
     <section id="about">
-        <div>
-            <img src="assets/profile.jpg" alt="My Picture">
-            <h1>Alan Chang</h1>
-            <p>Write a brief self-introduction here that reflects your personality, skills, and passions.</p>
-            <a href="#projects" class="btn">See My Projects</a>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 30px; max-width: 1200px; margin: auto;">
+            <!-- Profile Image -->
+            <img src="assets/profile.jpg" alt="Alan Chang" style="width: 200px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        
+            <!-- Introduction -->
+            <div style="max-width: 600px; text-align: left;">
+                <h1>I'm Alan Chang.</h1>
+                <p>
+                    I'm a junior at National Taiwan University, currently double majoring in Data Science and Civil Engineering.
+
+                    My research interests are Human-Computer Interactions, Computer Vision, and Machine Learning, and I want to implement them into sports analytics.
+
+                    I have experience in both software and hardware projects. On the software side, I'm currently most experienced in Python, and have worked with libraries such as OpenCV, Sklearn, Pytorch, etc. On the hardware side, I have experience with Arduino and Raspberry Pi.
+                </p>
+                <a href="#projects" class="btn">See My Projects</a>
+            </div>
         </div>
     </section>
+
 
     <!-- Projects Section -->
     <section id="projects">
