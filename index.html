@@ -9,21 +9,50 @@
             font-family: Times New Roman, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+        #left-column {
+            background-color: #f4f4f4;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        #left-column img {
+            max-width: 80%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
-            background-color: #1034A6;
+            background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            width: 100%;
+            padding: 10px 0;
             text-align: center;
         }
         section {
-            margin: 20px;
-            padding: 20px;
+            margin: 20px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 800px;
         }
         .projects {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
         .project-card {
             border: 1px solid #ddd;
@@ -35,52 +64,45 @@
         .project-card h3 {
             margin: 0 0 10px;
         }
-        .profile-pic {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            max-width: 150px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
         footer {
             text-align: center;
             background-color: #f1f1f1;
             padding: 10px;
+            width: 100%;
             position: fixed;
             bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write your self-introduction here.</p>
-    </section>
+    <div id="left-column">
+        <img src="./assets/profile.jpg" alt="My Picture">
+    </div>
+    <div id="main-content">
+        <header>
+            <h1>Welcome to My Website</h1>
+        </header>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write your self-introduction here.</p>
+        </section>
 
-    <section id="picture">
-        <h2>My Picture</h2>
-        <img src="assets/profile.jpg" alt="My Picture" class="profile-pic">
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Brief description of the project.</p>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <!-- Add more project cards as needed -->
             </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Brief description of the project.</p>
-            </div>
-            <!-- Add more project cards as needed -->
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Your Name. All Rights Reserved.</p>
