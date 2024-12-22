@@ -3,110 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>My Portfolio</title>
     <style>
-        body {
-            font-family: Times New Roman, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: row;
-            min-height: 100vh;
+            box-sizing: border-box;
         }
-        #left-column {
-            background-color: #f4f4f4;
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
         }
-        #left-column img {
-            max-width: 80%;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        #main-content {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            background-color: #1A18B5;
-            color: white;
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
             padding: 10px 0;
-            text-align: center;
         }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+        /* Section Styling */
         section {
-            margin: 20px 0;
-            padding: 10px;
-            width: 100%;
-            max-width: 800px;
-            font-size: 20px;
-        }
-        .projects {
+            height: 100vh;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
-        .project-card {
-            border: 1px solid #ddd;
+        section#about {
+            background: #f4f4f4;
+        }
+        section#projects {
+            background: #e8f5e9;
+        }
+        section#contact {
+            background: #fce4ec;
+        }
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: white;
+            background: #4CAF50;
+            text-decoration: none;
             border-radius: 5px;
-            padding: 15px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
         }
-        .project-card h3 {
-            margin: 0 0 10px;
+        .btn:hover {
+            background: #45a049;
         }
         footer {
             text-align: center;
-            background-color: #f1f1f1;
-            padding: 10px;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
+            padding: 20px 0;
+            background: #333;
+            color: white;
+        }
+        /* Image Styling */
+        img {
+            max-width: 150px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <div id="left-column">
-        <img src="/assets/profile.jpg" alt="My Picture">
-    </div>
-    <div id="main-content">
-        <header>
-            <h1>Welcome to My Website</h1>
-        </header>
-        
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! My name is Alan Chang, I'm a junior currently double majoring in Data Science and Civil Engineering at National Taiwan Univeristy.</p>
-        </section>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section id="projects">
+    <!-- About Section -->
+    <section id="about">
+        <div>
+            <img src="assets/profile.jpg" alt="My Picture">
+            <h1>Hello, I'm [Your Name]</h1>
+            <p>Write a brief self-introduction here that reflects your personality, skills, and passions.</p>
+            <a href="#projects" class="btn">See My Projects</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div>
             <h2>My Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Brief description of the project.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Brief description of the project.</p>
-                </div>
-                <!-- Add more project cards as needed -->
-            </div>
-        </section>
-    </div>
+            <p>Here’s a showcase of my favorite projects.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+        <div>
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me via email or through my social media links below.</p>
+            <a href="mailto:your-email@example.com" class="btn">Email Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
