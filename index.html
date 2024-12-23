@@ -4,109 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Times New Roman, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        /* Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 10px 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #4CAF50;
-        }
-        /* Section Styling */
-        section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            font-size: 20px
-        }
-        section#about {
-            background: #f4f4f4;
-        }
-        section#projects {
-            background: #e8f5e9;
-        }
-        section#contact {
-            background: #fce4ec;
-        }
-        h1, h2 {
-            margin-bottom: 15px;
-        }
-        p {
-            max-width: 600px;
-            margin: 0 auto 20px;
-            font-size: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            color: white;
-            background: #53A9D4;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #4692B8;
-        }
-
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background: #333;
-            color: white;
-        }
-        /* Image Styling */
-        img {
-            max-width: 220px;
-            margin-bottom: 20px;
-            border-radius: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -116,11 +18,12 @@
 
     <!-- About Section -->
     <section id="about">
-        <div style="display: flex; align-items: flex-start; justify-content: flex-start; gap: 50px; max-width: 1200px; margin: auto; padding-top: 0px;">
+        <h1>About</h1>
+        <div style="display: flex; align-items: flex-start; justify-content: center; gap: 50px; max-width: 1200px; margin: auto; padding-top: 8vh;">
             <!-- Profile Image -->
             <div style="text-align: center;">
-                <img src="assets/profile.jpg" alt="My Picture" style="width: 250px; border-radius: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                <p style="margin-top: 0px; font-size: 24px; font-weight: bold;">Alan Chang</p>
+                <img src="images/profile.jpg" alt="My Picture" class="profile_img">
+                <p style="margin-top: 1vh; font-size: 28px; font-weight: bold;">Alan Chang</p>
             </div>
 
             <!-- Introduction -->
@@ -137,17 +40,30 @@
                 <p>
                     Outside of academics, I love to play baseball, cook, watch movies, and listen to music. I'm currently the captain of the Civil Engineering department baseball team, and a cooking instructor in the NTU cooking club. 
                 </p>
-                <a href="#projects" class="btn">See My Projects</a>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <div>
-            <h2>My Projects</h2>
-            <p>Here’s a showcase of my favorite projects.</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+        <h1>My Projects</h1>
+        <div style="margin-top: 20px;">
+            <!-- Project 1 -->
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                <!-- Clickable Project Image -->
+                <a href="https://link.springer.com/chapter/10.1007/978-981-19-9582-8_26" target="_blank" style="text-decoration: none;">
+                    <img src="images/project1.jpg" alt="Project 1 Image" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                </a>
+                <!-- Project Info -->
+                <div>
+                    <!-- Clickable Project Title -->
+                    <a href="https://link.springer.com/chapter/10.1007/978-981-19-9582-8_26" target="_blank" style="text-decoration: none; color: black;">
+                        <h3>Real-Time Intentional Eye Blink Detection Using Rhombus Identification</h3>
+                    </a>
+                    <p style="color: gray; margin: 5px 0;">ICS 2022</p>
+                    <p style="margin: 5px 0;">Alan Shu-Luen Chang</p>
+                </div>
+            </div>
         </div>
     </section>
 
